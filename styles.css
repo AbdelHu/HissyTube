@@ -1,0 +1,418 @@
+
+body {
+    background-color: rgb(16, 16, 16);
+    font-family: "Arial";
+    font-size: 120%;
+    color: whitesmoke;
+    overflow: scroll;
+}
+
+hr.MainLine {
+    color: rgb(132, 132, 132);
+    width: 99%;
+}
+
+.Header {
+    display: flexbox;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    background-color: rgb(29, 29, 29);
+    box-shadow: 0px 15px 20px black;
+    margin-left: 0%; margin-right: 0%;
+    border-radius: 5px;
+    width: 100%;
+
+    height: 25%;
+} .Header > input {
+    font-size: 130%;
+    margin-top: 1.25%;margin-left: 9.5%;
+    border-radius: 15px;
+
+    padding-top: 0.5%; padding-left: 1%; padding-bottom: 0.5%; padding-right: 1%;
+
+    width: 40%;
+    height: 0.25%;
+
+    border: 2px solid rgb(75, 75, 75);
+    color: rgb(227, 227, 227);
+    background-color: rgb(33, 33, 33);
+    outline: none;
+
+    transition: 0.3s;
+} .Header > input:hover {
+    cursor: text;
+    background-color: rgb(40, 40, 40);
+    letter-spacing: 3px;
+
+    transition: 0.5s;
+} .Header > input:focus {
+    cursor: text;
+    background-color: rgb(42, 42, 42);
+    border: 2px solid rgb(108, 50, 209);
+} 
+
+.Sidebar {
+    display: inline-flex;
+    flex-flow: column wrap;
+
+    margin-left: 1%;
+    margin-top: 1%;
+    padding-right: 1%;
+    border-right: 1px solid rgb(16, 16, 16);
+    
+    transition: border-right 0.35s;
+} .Sidebar:hover {
+    border-right: 1px solid rgb(175, 175, 175);
+    background-color: rgb(18, 18, 18);
+
+} .Sidebar > button {
+    background-color: rgb(20, 20, 20);
+    color: whitesmoke;
+    margin-top: 4%;
+    width: 190px;
+    height: 60px;
+    border-radius: 15px;
+
+    font-size: 90%;
+    border: none;
+
+    transition: background-color 0.1s, letter-spacing 0.2s;
+} #activeButton_id {
+    background-color: rgb(61, 61, 61);
+    color: whitesmoke;
+    position: relative;
+    width: 190px;
+    height: 60px;
+    border-radius: 15px;
+
+    font-size: 90%;
+    border: none;
+
+    transition: background-color 0.1s, letter-spacing 0.2s;
+} #activeButton_id:hover {
+    background-color: rgb(98, 96, 125);
+    letter-spacing: 3px;
+    color: whitesmoke;
+    cursor: pointer;
+} #activeButton_id:active {
+    background-color: rgb(77, 74, 105);
+    letter-spacing: 2px;
+    cursor: grabbing;
+} .Sidebar > button:hover {
+    background-color: rgb(38, 38, 38);
+    letter-spacing: 3px;
+    color: whitesmoke;
+    cursor: pointer;
+} .Sidebar > button:active {
+    background-color: rgb(54, 54, 54);
+    color: whitesmoke;
+    letter-spacing: 2px;
+    cursor: grabbing;
+} .SidebarLine  {
+    position: relative;
+    background-color: rgb(255, 0, 0);
+} .HomeButton {
+    margin-top: 10%;
+} .ShortsPageButton {
+    margin-bottom: 30%;
+}
+
+.Break {
+    flex-basis: 100%;
+    width: 0;
+}
+
+.Title {
+    font-size: 130%;
+    display: inline-block;
+    font-weight: 1000;
+
+    margin-left: 1%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+
+    text-decoration: underline rgb(180, 26, 250);
+    font-family: 'Luminari';
+    letter-spacing: 4px;
+    margin-right: 5%;
+
+    transition: text-decoration 0.05s, text-shadow 0.2s;
+} .Title:hover {
+    cursor: pointer;
+    text-decoration: underline rgb(98, 31, 126);
+    text-shadow: 10px 10px 50px black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+
+    transition: color 0.2s;
+} a:active {
+    color: rgb(118, 119, 177);
+}
+
+
+.Video {
+    position: absolute;
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    justify-content: left;
+    align-items: normal;
+
+    margin-left: 1.6%;
+}
+
+.Video > iframe {
+    margin-left: 0.5%;
+}
+
+.VidButtons {
+    width: 60%;
+
+    margin-bottom: 0.5%;
+}
+
+.VidButtons > button {
+    width: 20%;
+    height: 65px;
+    text-align: center;
+    display: inline;
+
+    margin-top: 2.5%;
+    margin-bottom: 1%;
+    margin-right: 1.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 200%;
+
+    background-color: rgb(32, 32, 32);
+    border: 2px solid rgb(15, 15, 15);
+    color: whitesmoke;
+    position: relative;
+    border-radius: 15px;
+
+    font-size: 100%;
+    border: none;
+
+    transition: background-color 0.1s, border 0.3s;
+} .VidButtons > button:hover {
+    background-color: rgb(44, 44, 44);
+    color: whitesmoke;
+    cursor: pointer;
+} .VidButtons > button:active {
+    background-color: rgb(15, 15, 15);
+    color: whitesmoke;
+}
+
+
+.VidComments {
+    display: flex;
+    flex-wrap: wrap;
+    
+    padding: 5%;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    margin-bottom: 5%;
+    background-color: rgb(26, 26, 26);
+
+    transition: background-color 0.2s;
+} .VidComments:hover {
+    background-color: rgb(28, 28, 28);
+}
+
+.Comment {
+    -webkit-user-select: none;
+    user-select: none;
+    display: inline-flexbox;
+    flex-wrap: wrap;
+
+    margin: 20px 0 20px;
+    width: 100%;
+    padding: 5%;
+    border-radius: 15px;
+    background-color: rgb(40, 40, 40);
+
+    transition: background-color 0.2s;
+} .Comment > p {
+    -webkit-user-select: text;
+    user-select: text;
+
+} .Comment > p:hover {
+    cursor: text;
+
+} .Comment:hover {
+    background-color: rgb(42, 42, 42);
+    cursor: default;
+} .Comment > img, .newPfp {  /*Profile pictures*/
+    -webkit-user-select: none;
+    user-select: none;
+    display: inline;
+
+    margin-top: 2%;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+} .Comment > p > img {
+    -webkit-user-select: none;
+    user-select: none;
+
+    width: 60%;
+    height: 50%;
+    transition: width 0.2s, height 0.2s;
+} .Comment > p:hover > img:hover {
+    cursor: default;
+    width: 65%;
+    height: 55%
+}
+
+.CommentInput {
+    -webkit-user-select: none;
+    user-select: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    margin: 0% 0 0% 0;
+    width: 70%;
+    height: 200px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 15px;
+    font-size: 75%;
+    background-color: rgb(51, 51, 51);
+}
+
+.CommentInput > input[type=text] {
+    color: whitesmoke;
+    padding: 2% 2% 2% 2%;
+    border-radius: 15px;
+    margin-bottom: 2%;
+    font-size: 90%;
+    background-color: rgb(40, 40, 40);
+
+    box-sizing: border-box;
+    border: 2px solid rgb(59, 59, 59);
+    outline: none;
+    width: 95%;
+
+    transition: 0.5s;
+} .CommentInput > input[type=text]:focus {
+    border: 2px solid rgb(135, 50, 255);
+
+    transition: 0.1s;
+} .CommentInput > input[type=text]:active {
+   border: 2px solid rgb(92, 17, 135);
+} 
+
+.CommentInput {
+    font-size: 90%;
+}
+
+.CommentInput > button {
+    -webkit-user-select: none;
+    user-select: none;
+    width: 25%;
+
+    color: whitesmoke;
+    border-radius: 15px;
+
+    font-size: 20px;
+    background-color: rgb(40, 40, 40);
+    border: 1px solid rgb(64, 64, 64);
+
+    transition: background-color 0.1s;
+} .CommentInput > button:hover {
+    cursor: pointer;
+    background-color: rgb(45, 45, 45);
+} .CommentInput > button:active {
+    cursor: pointer;
+    background-color: rgb(36, 36, 36);
+}
+
+.Comment > button {
+    color: whitesmoke;
+    border-radius: 15px;
+
+    padding: 0.2%;
+    font-size: 150%;
+    background-color: rgb(40, 40, 40);
+    border: 1px solid rgb(64, 64, 64);
+    width: 25%;
+
+    transition: background-color 0.1s;
+} .Comment > button:hover {
+    cursor: pointer;
+    background-color: rgb(54, 54, 54);
+} .Comment > button:active {
+    cursor: pointer;
+    background-color: rgb(43, 43, 43);
+}
+
+.ProfileName {
+    display: inline-block;
+    margin-left: 3%;
+    text-decoration: underline;
+    font-size: 20px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+.Comment > .Comment, .Comment > .NewVidComments, .Comment > .NewVidComment {
+    display: inline-block;
+    position: relative;
+    width: 70%;
+    background-color: rgb(40, 40, 40);
+    border-radius: 15px;
+    padding: 1% 1% 1% 2%;
+    border: 1px solid rgb(40, 40, 40);;
+
+    transition: background-color 0.2s;
+} .Comment > .Comment:hover, .Comment > .NewVidComments:hover, .Comment > .NewVidComment:hover {
+    background-color: rgb(38, 38, 38);
+
+} .Comment > .Comment > .Comment {
+    display: inline-block;
+    width: 70%;
+    background-color: rgb(40, 40, 40);
+    padding: 1% 1% 1% 2%;
+    border: 1px solid rgb(40, 40, 40);;
+
+    transition: background-color 0.2s;
+} .Comment > .Comment > .Comment:hover {
+    background-color: rgb(50, 50, 50);
+} 
+
+
+.RemoveNewCommentButton {
+    display:table;
+    position: absolute;
+    text-align: center;
+    width: 150px;
+    height: 30px;
+
+    background-color: rgb(198, 70, 70);
+    color: whitesmoke;
+    border: none;
+    border-radius: 15px;
+
+    margin: 1% 3% 1% 1%;
+    right: 0.001%;
+
+    transition: background-color 0.2s;
+} .RemoveNewCommentButton:hover {
+    cursor: pointer;
+    background-color: rgb(152, 47, 47);
+
+}
+
+.NewVidComments {
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+.NewVidComment {
+    width: 60%;
+}
